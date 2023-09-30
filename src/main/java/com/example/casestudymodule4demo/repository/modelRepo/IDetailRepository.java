@@ -1,4 +1,4 @@
-package com.example.casestudymodule4demo.repository;
+package com.example.casestudymodule4demo.repository.modelRepo;
 
 
 import com.example.casestudymodule4demo.model.DetailStudentAndSubject;

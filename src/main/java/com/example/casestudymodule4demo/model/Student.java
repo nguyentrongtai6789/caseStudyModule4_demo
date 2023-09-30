@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "student")
@@ -22,6 +23,8 @@ public class Student {
     private String address;
     @Column(columnDefinition = "VARCHAR(255) default 'download.jpg'")
     private String url_img;
+    @Column(columnDefinition = "DATE default '2005-01-01'") // yyyy-MM-dd
+    private LocalDate dateOfBirth;
     @Transient
     private MultipartFile multipartFile;
     @Min(value = 0)
@@ -32,11 +35,13 @@ public class Student {
     @JoinColumn(name = "id_status")
     private Status status;
 
-    public Student(Long id, String name, String address, String url_img, MultipartFile multipartFile, int count_subject, Status status) {
+
+    public Student(Long id, String name, String address, String url_img, LocalDate dateOfBirth, MultipartFile multipartFile, int count_subject, Status status) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.url_img = url_img;
+        this.dateOfBirth = dateOfBirth;
         this.multipartFile = multipartFile;
         this.count_subject = count_subject;
         this.status = status;
@@ -99,5 +104,13 @@ public class Student {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }

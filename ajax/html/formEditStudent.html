@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/formEditStudent.js"></script>
+    <link rel="stylesheet" href="../css/formEditStudent.css">
+</head>
+<body onload="fillStudentToForm()">
+<form id="form-edit-student" enctype="multipart/form-data">
+    <h1>Sửa thông tin sinh viên</h1>
+    <table style="margin-top: 20px;">
+        <tr>
+            <td width="150px">Họ và tên:</td>
+            <td><input type="text" id="name-edit">
+                <span id="valid-name-edit"></span></td>
+        </tr>
+        <tr>
+            <td width="150px">Ngày sinh:</td>
+            <td><input type="date" id="dob-edit"></td>
+        </tr>
+        <tr>
+            <td>Địa chỉ:</td>
+            <td><input type="text" id="address-edit">
+                <span id="valid-address-edit"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Ảnh:
+                <img src="" alt="" id="img-edit" style="width: 100px; height: 100px"></td>
+            <td><input type="file" id="file-image-edit"></td>
+        </tr>
+        <tr>
+            <td>Trạng thái:</td>
+            <td>
+                 <span id="status-edit-span">
+            </span>
+            </td>
+        </tr>
+        <tr style="text-align: center">
+            <td colspan="2">
+                <button type="submit" onclick="checkValidation()">Thêm</button>
+                <button type="reset">Đặt lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

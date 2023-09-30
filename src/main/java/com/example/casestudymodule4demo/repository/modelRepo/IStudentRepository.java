@@ -1,4 +1,4 @@
-package com.example.casestudymodule4demo.repository;
+package com.example.casestudymodule4demo.repository.modelRepo;
 
 
 import com.example.casestudymodule4demo.model.Student;
@@ -10,6 +10,5 @@ import java.util.List;
 
 @Repository
 public interface IStudentRepository extends JpaRepository<Student, Long> {
-    @Query(value = "select * from student where name like %?%", nativeQuery = true)
-    List<Student> searchByName(String name);
+
 }
