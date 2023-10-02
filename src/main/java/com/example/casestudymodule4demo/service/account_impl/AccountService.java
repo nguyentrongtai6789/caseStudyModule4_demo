@@ -22,8 +22,7 @@ import java.util.Optional;
 public class AccountService implements IAccountService, UserDetailsService {
     @Autowired
     private IAccountRepository accountRepository;
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+
 
     @Override
     public List<AccountDTO> findAll() {
